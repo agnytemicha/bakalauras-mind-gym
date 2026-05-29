@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@source '../**/*.vue';
+
+@theme {
+    --font-sans: "Cormorant Garamond", Georgia, serif;
+    --font-display: "Bangers", "Arial Black", sans-serif;
+    --color-mg-red: #e38482;
+    --color-mg-yellow: #f3dba1;
+    --color-mg-blue: #adcdee;
+    --color-mg-cream: #ffffff;
+    --color-mg-ink: #111111;
+    --color-mg-gray: #8d8d8d;
+    --color-mg-neutral: #bab9b9;
+    --color-mg-panel-gray: #d2d2d2;
+    --color-mg-light-gray: #d9d9d9;
+    --color-mg-border-gray: #777777;
+    --color-mg-text-gray: #484848;
+    --color-mg-field-gray: #4f4f4f;
+    --color-mg-placeholder-gray: #5f5f5f;
+    --color-mg-muted-gray: #6b6b6b;
+    --color-mg-neutral-hover: #a9a8a8;
+    --color-mg-soft-red: #d67371;
+    --color-mg-soft-yellow: #e7cf98;
+    --color-mg-soft-blue: #9dc4e4;
+}
+
+@layer base {
+    :root {
+        color-scheme: light;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    body {
+        min-height: 100vh;
+        background-color: #ffffff;
+        color: var(--color-mg-ink);
+        font-family: var(--font-sans);
+    }
+
+    #app {
+        min-height: 100vh;
+    }
+}
+
+@layer components {
+    .section-shell {
+        @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+    }
+
+    .playful-input {
+        @apply w-full rounded-2xl border-[3px] border-black/10 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:italic placeholder:text-mg-border-gray focus:border-mg-blue focus:ring-4 focus:ring-mg-blue/15;
+        font-family: var(--font-sans);
+    }
+
+    .playful-button {
+        @apply inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-bold text-black transition hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-black/10;
+        font-family: var(--font-sans);
+    }
+}
