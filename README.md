@@ -27,3 +27,5 @@ docker compose exec app npm run build
 Open the app at `http://localhost:8000`.
 
 phpMyAdmin is available at `http://localhost:8080`. Using `mind_gym_duomenys.sql` you can import Demo data.
+
+To import images drag & drop images from `/storage/app/public_replace` into `storage/app/public`.
