@@ -21,7 +21,7 @@ Run Laravel commands through the app container:
 ```bash
 docker compose exec app php artisan migrate
 docker compose exec app php artisan db:seed
-docker compose exec app npm run build
+docker compose exec app npm run dev
 ```
 
 Open the app at `http://localhost:8000`.
